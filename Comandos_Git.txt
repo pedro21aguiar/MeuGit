@@ -1,0 +1,43 @@
+
+#https://www.youtube.com/watch?v=OuOb1_qADBQ
+#Abrir Git:
+CMD> Acesse a pasta de destino dos projetos: Exemplo (Se meus projetos estão dentro do c:\Documents\Projetos) Use: cd documents [enter] em seguida cd Projetos [Enter];
+
+* Branch -> Versões diferentes do sistema;
+* Master -> Versão principal do sistema; (Branch Master) Versão Principal;
+* Commit -> Confirmar alterações atualizando o Git; (O Git identifica e atualiza o(s) arquivo de forma total ou parcial caso apenas uma linha tenha cido modificada ou o(s) total).
+	**Ao efetuar um commit SEMPRE DEVE SER COMENTADO usando "Mensagem de orientaçao/informação relevante modificado naquele momento";
+* Criar SEMPRE o arquivo README.md -> Local de documentação do proejto com o maximo de qualidade;
+* Untracked file -> Arquivos desconhecidos e não monitorados pelo git;
+* Os 7 primeiros caracteres do codigo hach do commit são usados no comando para reverter arquivos.
+Comandos:
+
+> git status -> Vare o diretorio em busca do que foi modificado e retorna na tela a informação;[enter]
+> git add "NOME DO ARQUIVO" -> Add arquivo ao git e passa a ser monitorado;[enter]
+> git add -A -> Add todos os arquivo Untracked ou que estão desatualizados, eles passarão a ser monitorados;[enter]
+> clear > Limpa tela; [enter]
+> git log -> Lista todos os commits feitos no Branch; [enter]
+> git commit -m "Mensagem aqui!"; [enter]
+> git Branch -> Lista todos os Branchs do projeto e o que tiver com "*" indica o Branch que esta sendo trabalhado naquele momento; [enter]
+> git Branch + "nome do arquivo"-> Cria novo Branch (imagine uma nova versão de teste que vc tambem queira monitorar pelo git).
+> git Branch checkout "nome do Branch" > Accessar o Branch saindo do atual;
+> git commit -am -> Faz o commit dos arquivos ja add o comando [git add -A] que significa add todos os arquivos Untracked;
+> git reset --soft + {hach do commit desejado} ->  volta para um estado de antes do ultimo commit (conserva os arquivos do ultimo commit);
+> git reset --mixed ->  volta para um estado de antes do ultimo commit (Não apaga arquivos) mas sera necessario fazer novo comand [git add -A] para atualizar os arquivos antes do commit;
+> git reset --hard ->  Ignora o ultimo commit excluindo ele e voltando p/ o penultimo; [NÃO RECOMENDADO QUANDO USO EM EQUIPE];
+> git diff -> mostra e identificar mudanças nos arquivos(conteudos dos arquivos);
+> git diff --name-only -> Mostra o nome dos arquivos alterados (NÃO mostra os conteudos dos arquivos);
+> git  diff "nome do arquivo" ->  Mostra o que foi alterado apenas no arquivo desejado;
+> git checkout HEAD -- ou "nome do Branch atual" (Exe: git checkout HEAD --arquivoX.css) -> Desistir de modificação de um determinado arquivo;
+
+################################ SUBIR P/ GITHUB###########################################
+
+Repositorio Remoto >>GitHub | github.com<<
+Crie repositorio no GitHub: Clique no + ou em New Repositore;
+Apos repositorio criado trasfira o REP. LOCAL p/ o Remoto;
+Gerar Chave p/ idenficar user e PC como tendo permissão p/ manipulação do ambiente remoto.
+Depois siga as orientações dispostas em sua conta no Git;
+
+fetch -> baixa os conteudos do repositorio remoto.
+git push -u origin master -> Envia os conteudos p/ repositorio remoto.
+git pull origin master -> Atualizar o repositorio local pegando do Remoto;
