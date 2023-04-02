@@ -21,6 +21,8 @@ type
     Img_LogoFundo: TImage;
     Pn_Rodape1: TPanel;
     Lb_Frase1: TLabel;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
     procedure BtFecharClick(Sender: TObject);
     procedure Bt_FecharClick(Sender: TObject);
     procedure Bt_DoadorClick(Sender: TObject);
