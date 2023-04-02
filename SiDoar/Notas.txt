@@ -1,0 +1,22 @@
+
+Paleta de cores seguindo site e logo do CECF;
+Cores Icones Pardrão: 
+#2A3854 (Azul escuro)
+#FF8A93 (Rosa)
+#5DD1FD (Azul Claro)
+
+Fomte da Logo: League Spartan
+
+Doador     | Doações | Relatório |
+[tbdoador]
+
+id
+nome_doador
+fone_doador
+e-mail_doador
+trabalhador
+
+A Caridade é um Exercio espiritual.
+Quem pratica o bem coloca em movimento as forças da alma.
+
+

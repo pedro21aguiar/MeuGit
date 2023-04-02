@@ -1,0 +1,18 @@
+program SiDoar;
+
+uses
+  Vcl.Forms,
+  UnitPrincipal in 'UnitPrincipal.pas' {FormTLPrincipal},
+  UnitCadDoador in 'UnitCadDoador.pas' {Form1},
+  UnitDoacao in 'UnitDoacao.pas' {Form2};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormTLPrincipal, FormTLPrincipal);
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm2, Form2);
+  Application.Run;
+end.

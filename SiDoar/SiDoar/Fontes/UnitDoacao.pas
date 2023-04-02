@@ -1,0 +1,26 @@
+unit UnitDoacao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TFormTLDoacao = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormTLDoacao: TFormTLDoacao;
+
+implementation
+
+{$R *.dfm}
+
+uses UnitTLRelatorios;
+
+end.

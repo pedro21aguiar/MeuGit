@@ -1,0 +1,14 @@
+program SiDoar;
+
+uses
+  Vcl.Forms,
+  UnitPrincipal in 'UnitPrincipal.pas' {FormTLPrincipal};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormTLPrincipal, FormTLPrincipal);
+  Application.Run;
+end.
