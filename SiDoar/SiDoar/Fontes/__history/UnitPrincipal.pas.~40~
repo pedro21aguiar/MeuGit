@@ -20,8 +20,14 @@ type
     Pn_ImagemFundo: TPanel;
     Img_LogoFundo: TImage;
     Pn_Rodape1: TPanel;
+    Lb_Frase1: TLabel;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
     procedure BtFecharClick(Sender: TObject);
     procedure Bt_FecharClick(Sender: TObject);
+    procedure Bt_DoadorClick(Sender: TObject);
+    procedure Bt_DoarClick(Sender: TObject);
+    procedure Bt_RelatoriosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,14 +41,31 @@ implementation
 
 {$R *.dfm}
 
+uses UnitCadDoador, UnitDoacao, UnitTLRelatorios;
+
 procedure TFormTLPrincipal.BtFecharClick(Sender: TObject);
 begin
   Application.Terminate;
 end;
 
+procedure TFormTLPrincipal.Bt_DoadorClick(Sender: TObject);
+begin
+  formTLCadDoador.ShowModal;
+end;
+
+procedure TFormTLPrincipal.Bt_DoarClick(Sender: TObject);
+begin
+  formTLDoacao.ShowModal;
+end;
+
 procedure TFormTLPrincipal.Bt_FecharClick(Sender: TObject);
 begin
   Application.Terminate;
+end;
+
+procedure TFormTLPrincipal.Bt_RelatoriosClick(Sender: TObject);
+begin
+  formTLRelatorios.ShowModal;
 end;
 
 end.
