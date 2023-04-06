@@ -1,0 +1,26 @@
+object DadaMod: TDadaMod
+  OldCreateOrder = False
+  Height = 274
+  Width = 521
+  object ConexaoConnection: TFDConnection
+    Params.Strings = (
+      'ConnectionDef=CONEXAO')
+    Connected = True
+    LoginPrompt = False
+    Left = 54
+    Top = 18
+  end
+  object DoadorTable: TFDQuery
+    Active = True
+    Connection = ConexaoConnection
+    SQL.Strings = (
+      'SELECT * FROM DOADOR')
+    Left = 54
+    Top = 82
+  end
+  object DataSource1: TDataSource
+    DataSet = DoadorTable
+    Left = 56
+    Top = 152
+  end
+end

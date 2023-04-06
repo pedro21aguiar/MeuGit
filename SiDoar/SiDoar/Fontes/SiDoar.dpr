@@ -6,7 +6,9 @@ uses
   UnitCadDoador in 'UnitCadDoador.pas' {FormTLCadDoador},
   UnitDoacao in 'UnitDoacao.pas' {FormTLDoacao},
   UnitTLRelatorios in 'UnitTLRelatorios.pas' {FormTLRelatorios},
-  UnitDM in 'UnitDM.pas' {DM: TDataModule};
+  UnitDM in 'UnitDM.pas' {DM: TDataModule},
+  UnitDestino in 'UnitDestino.pas' {FormTLDestino},
+  //Application.CreateForm(TDataMod, DataMod);
 
 {$R *.res}
 
@@ -18,5 +20,6 @@ begin
   Application.CreateForm(TFormTLDoacao, FormTLDoacao);
   Application.CreateForm(TFormTLRelatorios, FormTLRelatorios);
   Application.CreateForm(TDM, DM);
+  Application.CreateForm(TFormTLDestino, FormTLDestino);
   Application.Run;
 end.

@@ -21,11 +21,13 @@ type
     Img_LogoFundo: TImage;
     Pn_Rodape1: TPanel;
     Lb_Frase1: TLabel;
+    Bt_Destino: TSpeedButton;
     procedure BtFecharClick(Sender: TObject);
     procedure Bt_FecharClick(Sender: TObject);
     procedure Bt_DoadorClick(Sender: TObject);
     procedure Bt_DoarClick(Sender: TObject);
     procedure Bt_RelatoriosClick(Sender: TObject);
+    procedure Bt_DestinoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,11 +41,16 @@ implementation
 
 {$R *.dfm}
 
-uses UnitCadDoador, UnitDoacao, UnitTLRelatorios;
+uses UnitCadDoador, UnitDoacao, UnitTLRelatorios, UnitDestino;
 
 procedure TFormTLPrincipal.BtFecharClick(Sender: TObject);
 begin
   Application.Terminate;
+end;
+
+procedure TFormTLPrincipal.Bt_DestinoClick(Sender: TObject);
+begin
+  formTLDestino.ShowModal;
 end;
 
 procedure TFormTLPrincipal.Bt_DoadorClick(Sender: TObject);

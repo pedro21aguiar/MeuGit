@@ -1,0 +1,19 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 317
+  Width = 510
+  object ConexaoConnection: TFDConnection
+    Params.Strings = (
+      'ConnectionDef=CONEXAO')
+    LoginPrompt = False
+    Left = 34
+    Top = 50
+  end
+  object DoadorTable: TFDQuery
+    Connection = ConexaoConnection
+    SQL.Strings = (
+      'SELECT * FROM DOADOR')
+    Left = 34
+    Top = 114
+  end
+end

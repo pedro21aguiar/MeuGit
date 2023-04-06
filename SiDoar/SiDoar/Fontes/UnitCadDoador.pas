@@ -9,6 +9,9 @@ uses
 type
   TFormTLCadDoador = class(TForm)
     Lb_NomeDoador: TLabel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
   private
     { Private declarations }
   public

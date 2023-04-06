@@ -2,7 +2,7 @@ object FormTLCadDoador: TFormTLCadDoador
   Left = 0
   Top = 0
   Caption = 'Cadastrar Doador(a)'
-  ClientHeight = 407
+  ClientHeight = 290
   ClientWidth = 574
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -1318,10 +1318,31 @@ object FormTLCadDoador: TFormTLCadDoador
   PixelsPerInch = 96
   TextHeight = 13
   object Lb_NomeDoador: TLabel
-    Left = 24
+    Left = 16
     Top = 40
+    Width = 75
+    Height = 13
+    Caption = 'C'#243'digo Doador:'
+  end
+  object Label1: TLabel
+    Left = 16
+    Top = 88
     Width = 84
     Height = 13
     Caption = 'Nome do Doador:'
+  end
+  object Label2: TLabel
+    Left = 16
+    Top = 136
+    Width = 70
+    Height = 13
+    Caption = 'Fone Contato:'
+  end
+  object Label3: TLabel
+    Left = 16
+    Top = 200
+    Width = 32
+    Height = 13
+    Caption = 'E-mail:'
   end
 end
