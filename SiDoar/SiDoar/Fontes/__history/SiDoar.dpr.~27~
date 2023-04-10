@@ -1,0 +1,24 @@
+program SiDoar;
+
+uses
+  Vcl.Forms,
+  UnitPrincipal in 'UnitPrincipal.pas' {FormTLPrincipal},
+  UnitCadDoador in 'UnitCadDoador.pas' {FormTLCadDoador},
+  UnitDoacao in 'UnitDoacao.pas' {FormTLDoacao},
+  UnitTLRelatorios in 'UnitTLRelatorios.pas' {FormTLRelatorios},
+  UnitDM in 'UnitDM.pas' {DM: TDataModule},
+  UnitDestino in 'UnitDestino.pas' {FormTLDestino};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  AApplication.CreateForm(TFormTLPrincipal, FormTLPrincipal);
+  AApplication.CreateForm(TFormTLCadDoador, FormTLCadDoador);
+  AApplication.CreateForm(TFormTLDoacao, FormTLDoacao);
+  Application.CreateForm(TFormTLRelatorios, FormTLRelatorios);
+  Application.CreateForm(TDM, DM);
+  Application.CreateForm(TFormTLDestino, FormTLDestino);
+  lication.Run;
+end.

@@ -1,0 +1,49 @@
+unit UnitCadDoador;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.DBCtrls, Vcl.Mask,
+  Vcl.ExtCtrls, Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.Imaging.jpeg,
+  Vcl.Imaging.pngimage;
+
+type
+  TFormTLCadDoador = class(TForm)
+    Lb_NomeDoador: TLabel;
+    DBE_NomeDoador: TDBEdit;
+    Lb_FoneContato: TLabel;
+    DBE_FoneContato: TDBEdit;
+    Img_Contato: TImage;
+    Img_Doador: TImage;
+    Lb_Email: TLabel;
+    Img_Email: TImage;
+    Lb_DataHoraCadastro: TLabel;
+    Lb_dataHora: TLabel;
+    DBE_Email: TDBEdit;
+    DBGrid1: TDBGrid;
+    Label1: TLabel;
+    Img_ListaContatos: TImage;
+    Shape1: TShape;
+    Bevel1: TBevel;
+    Bevel2: TBevel;
+   
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormTLCadDoador: TFormTLCadDoador;
+
+implementation
+
+{$R *.dfm}
+
+
+
+
+//end.  (*
+
+   //   *)

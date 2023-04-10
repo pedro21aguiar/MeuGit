@@ -8,13 +8,18 @@ uses
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
   Data.DB, FireDAC.Comp.Client, FireDAC.Phys.FB, FireDAC.Phys.FBDef,
   FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
-  FireDAC.Comp.DataSet;
+  FireDAC.Comp.DataSet, FireDAC.Comp.UI, FireDAC.Phys.IBBase;
 
 type
   TDM = class(TDataModule)
-    ConexaoConnection: TFDConnection;
-    DoadorTable: TFDQuery;
-    Dt: TDataSource;
+    Conexao: TFDConnection;
+    FDQuery_Doadores: TFDQuery;
+    FDPhysFBDriverLink1: TFDPhysFBDriverLink;
+    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
+    FDQuery_DoadoresID_DOADOR: TIntegerField;
+    FDQuery_DoadoresNOME_DOADOR: TStringField;
+    FDQuery_DoadoresCONTATO_DOADOR: TStringField;
+    FDQuery_DoadoresEMAIL: TStringField;
   private
     { Private declarations }
   public

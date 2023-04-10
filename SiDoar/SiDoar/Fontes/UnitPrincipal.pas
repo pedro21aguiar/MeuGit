@@ -3,9 +3,20 @@ unit UnitPrincipal;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons,
-  Vcl.Imaging.pngimage;
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.StdCtrls,
+  Vcl.ExtCtrls,
+  Vcl.Buttons,
+  Vcl.Imaging.pngimage,
+  UnitDM;
 
 type
   TFormTLPrincipal = class(TForm)
@@ -21,13 +32,13 @@ type
     Img_LogoFundo: TImage;
     Pn_Rodape1: TPanel;
     Lb_Frase1: TLabel;
-    Bt_Destino: TSpeedButton;
+    Bt_Destinacao: TSpeedButton;
     procedure BtFecharClick(Sender: TObject);
     procedure Bt_FecharClick(Sender: TObject);
     procedure Bt_DoadorClick(Sender: TObject);
     procedure Bt_DoarClick(Sender: TObject);
     procedure Bt_RelatoriosClick(Sender: TObject);
-    procedure Bt_DestinoClick(Sender: TObject);
+    procedure Bt_DestinacaoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,7 +59,7 @@ begin
   Application.Terminate;
 end;
 
-procedure TFormTLPrincipal.Bt_DestinoClick(Sender: TObject);
+procedure TFormTLPrincipal.Bt_DestinacaoClick(Sender: TObject);
 begin
   formTLDestino.ShowModal;
 end;
