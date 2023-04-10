@@ -20,6 +20,7 @@ type
     FDQuery_DoadoresNOME_DOADOR: TStringField;
     FDQuery_DoadoresCONTATO_DOADOR: TStringField;
     FDQuery_DoadoresEMAIL: TStringField;
+    FDQuery_Destinacao: TFDQuery;
   private
     { Private declarations }
   public

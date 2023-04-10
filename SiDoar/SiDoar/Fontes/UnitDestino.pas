@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls,
-  Vcl.Mask, Vcl.DBCtrls, Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.Imaging.pngimage;
+  Vcl.Mask, Vcl.DBCtrls, Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.Imaging.pngimage,
+  UnitDM;
 
 type
   TFormTLDestino = class(TForm)
@@ -24,6 +25,7 @@ type
     Lb_id: TLabel;
     DBE_id_Destino: TDBEdit;
     Img_Doador: TImage;
+    DataSDestinacao: TDataSource;
     procedure Sbt_SairClick(Sender: TObject);
   private
     { Private declarations }

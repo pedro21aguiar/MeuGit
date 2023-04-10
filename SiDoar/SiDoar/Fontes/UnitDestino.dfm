@@ -1326,7 +1326,7 @@ object FormTLDestino: TFormTLDestino
   object Lb_NomeDestino: TLabel
     Left = 35
     Top = 104
-    Width = 78
+    Width = 66
     Height = 13
     Caption = 'Destina'#231#227'o:'
     Font.Charset = DEFAULT_CHARSET
@@ -1876,12 +1876,28 @@ object FormTLDestino: TFormTLDestino
     Top = 88
     Width = 352
     Height = 145
+    DataSource = DataSDestinacao
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID_DESTINO'
+        Title.Caption = 'C'#243'digo'
+        Width = 40
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOME_DESTINO'
+        Title.Caption = 'Destina'#231#227'o'
+        Width = 293
+        Visible = True
+      end>
   end
   object DBE_id_Destino: TDBEdit
     Left = 306
@@ -1889,5 +1905,10 @@ object FormTLDestino: TFormTLDestino
     Width = 59
     Height = 21
     TabOrder = 2
+  end
+  object DataSDestinacao: TDataSource
+    DataSet = DM.FDQuery_Destinacao
+    Left = 712
+    Top = 192
   end
 end

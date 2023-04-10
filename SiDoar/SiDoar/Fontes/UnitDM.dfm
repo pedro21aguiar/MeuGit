@@ -50,4 +50,12 @@ object DM: TDM
     Left = 40
     Top = 176
   end
+  object FDQuery_Destinacao: TFDQuery
+    Active = True
+    Connection = Conexao
+    SQL.Strings = (
+      'select * from DESTINO')
+    Left = 288
+    Top = 24
+  end
 end
