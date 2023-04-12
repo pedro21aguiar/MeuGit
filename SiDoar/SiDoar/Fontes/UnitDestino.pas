@@ -27,6 +27,8 @@ type
     Img_Doador: TImage;
     DataSDestinacao: TDataSource;
     procedure Sbt_SairClick(Sender: TObject);
+    //procedure Sbt_NovoClick(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -35,7 +37,7 @@ type
 
 var
   FormTLDestino: TFormTLDestino;
-
+  //FDQuery_Destino : TFDQuery;
 implementation
 
 {$R *.dfm}

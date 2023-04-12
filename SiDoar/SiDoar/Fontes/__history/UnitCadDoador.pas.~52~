@@ -1,0 +1,77 @@
+unit UnitCadDoador;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.StdCtrls,
+  Vcl.DBCtrls,
+  Vcl.Mask,
+  Vcl.ExtCtrls,
+  Data.DB, Vcl.Grids,
+  Vcl.DBGrids,
+  Vcl.Imaging.jpeg,
+  Vcl.Imaging.pngimage,
+  Vcl.Buttons,
+  UnitDM;
+
+type
+  TFormTLCadDoador = class(TForm)
+    Lb_NomeDoador: TLabel;
+    DBE_NomeDoador: TDBEdit;
+    Lb_FoneContato: TLabel;
+    DBE_FoneContato: TDBEdit;
+    Img_Contato: TImage;
+    Img_Doador: TImage;
+    Lb_Email: TLabel;
+    Img_Email: TImage;
+    Lb_DataHoraCadastro: TLabel;
+    Lb_dataHora: TLabel;
+    DBE_Email: TDBEdit;
+    DBGrid_ListaDoadores: TDBGrid;
+    Label1: TLabel;
+    Img_ListaContatos: TImage;
+    Shape1: TShape;
+    Bev_cadastro: TBevel;
+    Bev_ListaDoadores: TBevel;
+    Sbt_Novo: TSpeedButton;
+    Sbt_Aterar: TSpeedButton;
+    Sbt_Salvar: TSpeedButton;
+    Sbt_Sair: TSpeedButton;
+    Lb_id: TLabel;
+    DBE_id_Doador: TDBEdit;
+    DataSDoadores: TDataSource;
+    procedure Sbt_SairClick(Sender: TObject);
+    //procedure FormCreate(Sender: TObject);
+   // procedure Sbt_NovoClick(Sender: TObject);
+
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormTLCadDoador: TFormTLCadDoador;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormTLCadDoador.Sbt_SairClick(Sender: TObject);
+begin
+  FormTLCadDoador.Close;
+end;
+
+end.  (*
+
+   *)

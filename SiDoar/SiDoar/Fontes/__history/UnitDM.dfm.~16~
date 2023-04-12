@@ -1,0 +1,80 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 397
+  Width = 609
+  object Conexao: TFDConnection
+    ConnectionName = 'Conexao'
+    Params.Strings = (
+      'ConnectionDef=CONEXAO')
+    Connected = True
+    LoginPrompt = False
+    Left = 40
+    Top = 24
+  end
+  object TB_Doador: TFDTable
+    Active = True
+    IndexFieldNames = 'ID_DOADOR'
+    Connection = Conexao
+    UpdateOptions.UpdateTableName = 'DOADOR'
+    TableName = 'DOADOR'
+    Left = 128
+    Top = 24
+  end
+  object DataSDoador: TDataSource
+    DataSet = TB_Doador
+    Left = 128
+    Top = 96
+  end
+  object TB_Destino: TFDTable
+    Connection = Conexao
+    Left = 216
+    Top = 24
+  end
+  object DataSDestino: TDataSource
+    DataSet = TB_Destino
+    Left = 216
+    Top = 96
+  end
+  object TB_Doacao: TFDTable
+    Connection = Conexao
+    Left = 304
+    Top = 24
+  end
+  object DataSDoacao: TDataSource
+    DataSet = TB_Doacao
+    Left = 304
+    Top = 96
+  end
+  object SQLSomaDoacao: TFDCommand
+    Connection = Conexao
+    ParamData = <
+      item
+        Name = 'IDDoacao'
+      end
+      item
+        Name = 'SomaDoacao'
+      end>
+    Left = 64
+    Top = 192
+  end
+  object SQLSubtraiDoacao: TFDCommand
+    Connection = Conexao
+    ParamData = <
+      item
+        Name = 'IDDoacao'
+      end
+      item
+        Name = 'SubtracaoDoacao'
+      end>
+    Left = 64
+    Top = 256
+  end
+  object FDQuery_Doador: TFDQuery
+    Active = True
+    Connection = Conexao
+    SQL.Strings = (
+      'SELECT * FROM DOADOR')
+    Left = 256
+    Top = 184
+  end
+end

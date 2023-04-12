@@ -13,14 +13,27 @@ uses
 type
   TDM = class(TDataModule)
     Conexao: TFDConnection;
-    FDQuery_Doadores: TFDQuery;
-    FDPhysFBDriverLink1: TFDPhysFBDriverLink;
-    FDGUIxWaitCursor1: TFDGUIxWaitCursor;
-    FDQuery_DoadoresID_DOADOR: TIntegerField;
-    FDQuery_DoadoresNOME_DOADOR: TStringField;
-    FDQuery_DoadoresCONTATO_DOADOR: TStringField;
-    FDQuery_DoadoresEMAIL: TStringField;
-    FDQuery_Destinacao: TFDQuery;
+    TB_Doador: TFDTable;
+    DataSDoador: TDataSource;
+    TB_Destino: TFDTable;
+    DataSDestino: TDataSource;
+    TB_Doacao: TFDTable;
+    DataSDoacao: TDataSource;
+    SQLSomaDoacao: TFDCommand;
+    SQLSubtraiDoacao: TFDCommand;
+    FDQuery_Doador: TFDQuery;
+    FDQuery_Destino: TFDQuery;
+    TB_DoadorID_DOADOR: TIntegerField;
+    TB_DoadorNOME_DOADOR: TStringField;
+    TB_DoadorCONTATO_DOADOR: TStringField;
+    TB_DoadorEMAIL: TStringField;
+    TB_DestinoID_DESTINO: TIntegerField;
+    TB_DestinoNOME_DESTINO: TStringField;
+    TB_DoacaoID_DOACAO: TIntegerField;
+    TB_DoacaoID_DOADOR: TStringField;
+    TB_DoacaoIDDESTINO: TStringField;
+    TB_DoacaoVALOR_DOACAO: TBCDField;
+    TB_DoacaoDATA_HORA: TSQLTimeStampField;
   private
     { Private declarations }
   public

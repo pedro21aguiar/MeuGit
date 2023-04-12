@@ -1,9 +1,11 @@
 object FormTLDestino: TFormTLDestino
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'Destino Doa'#231#227'o'
-  ClientHeight = 273
-  ClientWidth = 793
+  ClientHeight = 283
+  ClientWidth = 803
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -1869,6 +1871,8 @@ object FormTLDestino: TFormTLDestino
     Top = 123
     Width = 349
     Height = 21
+    DataField = 'NOME_DESTINO'
+    DataSource = DM.DataSDestino
     TabOrder = 0
   end
   object DBGrid_ListaDestinacao: TDBGrid
@@ -1877,6 +1881,7 @@ object FormTLDestino: TFormTLDestino
     Width = 352
     Height = 145
     DataSource = DataSDestinacao
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -1904,10 +1909,14 @@ object FormTLDestino: TFormTLDestino
     Top = 85
     Width = 59
     Height = 21
+    DataField = 'ID_DESTINO'
+    DataSource = DM.DataSDestino
+    Enabled = False
+    ReadOnly = True
     TabOrder = 2
   end
   object DataSDestinacao: TDataSource
-    DataSet = DM.FDQuery_Destinacao
+    DataSet = DM.TB_Destino
     Left = 712
     Top = 192
   end

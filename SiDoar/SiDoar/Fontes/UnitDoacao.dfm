@@ -1,9 +1,11 @@
 object FormTLDoacao: TFormTLDoacao
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'Fazer Doa'#231#227'o'
-  ClientHeight = 297
-  ClientWidth = 365
+  ClientHeight = 329
+  ClientWidth = 375
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -1319,9 +1321,9 @@ object FormTLDoacao: TFormTLDoacao
   TextHeight = 13
   object Bev_Doacao: TBevel
     Left = 8
-    Top = 88
+    Top = 79
     Width = 349
-    Height = 185
+    Height = 216
   end
   object Sbt_Novo: TSpeedButton
     Left = 8
@@ -1762,22 +1764,9 @@ object FormTLDoacao: TFormTLDoacao
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object Lb_Destino: TLabel
-    Left = 50
-    Top = 149
-    Width = 66
-    Height = 13
-    Caption = 'Destina'#231#227'o:'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-  end
   object Lb_Valor: TLabel
     Left = 225
-    Top = 204
+    Top = 203
     Width = 32
     Height = 13
     Caption = 'Valor:'
@@ -1790,7 +1779,7 @@ object FormTLDoacao: TFormTLDoacao
   end
   object Lb_id_doacao: TLabel
     Left = 24
-    Top = 204
+    Top = 203
     Width = 64
     Height = 13
     Caption = 'Doa'#231#227'o N'#186': '
@@ -1842,9 +1831,22 @@ object FormTLDoacao: TFormTLDoacao
       97389EFEECD1C65E141F3EEA959CAE3AE7F8FCD38CFB9EF8B105B253F7F0F86F
       070663D1E1DE497D0000000049454E44AE426082}
   end
-  object Image1: TImage
+  object Label1: TLabel
+    Left = 50
+    Top = 153
+    Width = 66
+    Height = 19
+    Caption = 'Destina'#231#227'o:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Image2: TImage
     Left = 24
-    Top = 144
+    Top = 148
     Width = 20
     Height = 20
     HelpContext = 15
@@ -1871,34 +1873,57 @@ object FormTLDoacao: TFormTLDoacao
       989A3CF6D4C8BCFE1FD8AEE33BBBF0DE14812855CD0000000049454E44AE4260
       82}
   end
-  object LisB_Doador: TListBox
-    Left = 24
-    Top = 121
-    Width = 321
-    Height = 22
-    ItemHeight = 13
-    TabOrder = 0
-  end
-  object LisB_Destinacao: TListBox
-    Left = 24
-    Top = 165
-    Width = 321
-    Height = 22
-    ItemHeight = 13
-    TabOrder = 1
-  end
   object DBE_ValorDoado: TDBEdit
     Left = 225
-    Top = 218
+    Top = 217
     Width = 120
     Height = 21
-    TabOrder = 2
+    DataField = 'VALOR_DOACAO'
+    DataSource = DM.DataSDoacao
+    TabOrder = 0
   end
   object DBE_id_doacao: TDBEdit
     Left = 24
-    Top = 218
+    Top = 217
     Width = 120
     Height = 21
+    DataField = 'ID_DOACAO'
+    DataSource = DM.DataSDoacao
+    Enabled = False
+    TabOrder = 1
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 24
+    Top = 174
+    Width = 321
+    Height = 21
+    DataField = 'NOME_DESTINO'
+    DataSource = DM.DataSDestino
+    KeyField = 'NOME_DESTINO'
+    ListField = 'NOME_DESTINO'
+    ListSource = DataSFiltraDestino
+    TabOrder = 2
+  end
+  object DBLookupComboBox2: TDBLookupComboBox
+    Left = 24
+    Top = 123
+    Width = 321
+    Height = 21
+    DataField = 'NOME_DOADOR'
+    DataSource = DM.DataSDoador
+    KeyField = 'NOME_DOADOR'
+    ListField = 'NOME_DOADOR'
+    ListSource = DataSFiltraDoador
     TabOrder = 3
+  end
+  object DataSFiltraDestino: TDataSource
+    DataSet = DM.FDQuery_Destino
+    Left = 288
+    Top = 248
+  end
+  object DataSFiltraDoador: TDataSource
+    DataSet = DM.FDQuery_Doador
+    Left = 184
+    Top = 248
   end
 end

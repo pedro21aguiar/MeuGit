@@ -50,8 +50,6 @@ type
     DBE_id_Doador: TDBEdit;
     DataSDoadores: TDataSource;
     procedure Sbt_SairClick(Sender: TObject);
-   // procedure DataSDoadoresDataChange(Sender: TObject; Field: TField);
-    //procedure DataSDoadoresDataChange(Sender: TObject; Field: TField);
     //procedure FormCreate(Sender: TObject);
 
 
@@ -63,17 +61,24 @@ type
 
 var
   FormTLCadDoador: TFormTLCadDoador;
+  //Conexao: TFDConnection;
 
 implementation
 
 {$R *.dfm}
 
+//procedure TFormTLCadDoador.FormCreate(Sender: TObject);
+//begin
+  //Conexao.Params.DriverID:= 'FD';
+  //Conexao.Params.UserName:= 'sysdba';
+  //Conexao.Params.Password:= 'masterkey';
+  //Conexao.Params.Values ['Server']:= '127.0.0.1';
+  //Conexao.Connected:= True;
 
-
-
+//end;
 
 procedure TFormTLCadDoador.Sbt_SairClick(Sender: TObject);
-begin
+begin
   FormTLCadDoador.Close;
 end;
 

@@ -1,9 +1,11 @@
 object FormTLCadDoador: TFormTLCadDoador
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'Cadastrar Doador(a)'
-  ClientHeight = 365
-  ClientWidth = 936
+  ClientHeight = 375
+  ClientWidth = 946
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -1330,8 +1332,8 @@ object FormTLCadDoador: TFormTLCadDoador
     Height = 257
   end
   object Lb_NomeDoador: TLabel
-    Left = 50
-    Top = 161
+    Left = 54
+    Top = 113
     Width = 96
     Height = 13
     Caption = 'Nome do Doador:'
@@ -1343,8 +1345,8 @@ object FormTLCadDoador: TFormTLCadDoador
     ParentFont = False
   end
   object Lb_FoneContato: TLabel
-    Left = 50
-    Top = 213
+    Left = 54
+    Top = 165
     Width = 78
     Height = 13
     Caption = 'Fone Contato:'
@@ -1356,8 +1358,8 @@ object FormTLCadDoador: TFormTLCadDoador
     ParentFont = False
   end
   object Img_Contato: TImage
-    Left = 24
-    Top = 207
+    Left = 28
+    Top = 159
     Width = 20
     Height = 20
     Center = True
@@ -1400,8 +1402,8 @@ object FormTLCadDoador: TFormTLCadDoador
       000049454E44AE426082}
   end
   object Img_Doador: TImage
-    Left = 24
-    Top = 154
+    Left = 28
+    Top = 106
     Width = 20
     Height = 20
     HelpContext = 15
@@ -1441,8 +1443,8 @@ object FormTLCadDoador: TFormTLCadDoador
       070663D1E1DE497D0000000049454E44AE426082}
   end
   object Lb_Email: TLabel
-    Left = 50
-    Top = 270
+    Left = 54
+    Top = 222
     Width = 38
     Height = 13
     Caption = 'E-mail:'
@@ -1454,8 +1456,8 @@ object FormTLCadDoador: TFormTLCadDoador
     ParentFont = False
   end
   object Img_Email: TImage
-    Left = 24
-    Top = 265
+    Left = 28
+    Top = 217
     Width = 20
     Height = 20
     Center = True
@@ -1480,7 +1482,7 @@ object FormTLCadDoador: TFormTLCadDoador
       082640280CF30000000049454E44AE426082}
   end
   object Lb_DataHoraCadastro: TLabel
-    Left = 227
+    Left = 229
     Top = 339
     Width = 72
     Height = 10
@@ -1493,7 +1495,7 @@ object FormTLCadDoador: TFormTLCadDoador
     ParentFont = False
   end
   object Lb_dataHora: TLabel
-    Left = 305
+    Left = 307
     Top = 339
     Width = 52
     Height = 10
@@ -1999,32 +2001,40 @@ object FormTLCadDoador: TFormTLCadDoador
     ParentFont = False
   end
   object DBE_NomeDoador: TDBEdit
-    Left = 24
-    Top = 180
+    Left = 28
+    Top = 132
     Width = 333
     Height = 21
+    DataField = 'NOME_DOADOR'
+    DataSource = DM.DataSDoador
     TabOrder = 0
   end
   object DBE_FoneContato: TDBEdit
-    Left = 24
-    Top = 233
-    Width = 153
+    Left = 28
+    Top = 185
+    Width = 143
     Height = 21
+    DataField = 'CONTATO_DOADOR'
+    DataSource = DM.DataSDoador
+    MaxLength = 14
     TabOrder = 1
   end
   object DBE_Email: TDBEdit
-    Left = 24
-    Top = 289
+    Left = 28
+    Top = 241
     Width = 333
     Height = 21
+    DataField = 'E-MAIL'
+    DataSource = DM.DataSDoador
     TabOrder = 2
   end
   object DBGrid_ListaDoadores: TDBGrid
-    Left = 393
+    Left = 385
     Top = 108
     Width = 521
     Height = 229
     DataSource = DataSDoadores
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
     TabOrder = 3
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -2066,11 +2076,14 @@ object FormTLCadDoador: TFormTLCadDoador
     Top = 105
     Width = 59
     Height = 21
+    DataField = 'ID_DOADOR'
+    DataSource = DM.DataSDoador
+    Enabled = False
     TabOrder = 4
   end
   object DataSDoadores: TDataSource
-    DataSet = DM.FDQuery_Doadores
+    DataSet = DM.TB_Doador
     Left = 856
-    Top = 120
+    Top = 288
   end
 end
